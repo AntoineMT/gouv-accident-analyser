@@ -227,7 +227,7 @@ class Accidents
         return $this->catr;
     }
 
-    public function setCatr(string $catr): self
+    public function setCatr( $catr): self
     {
         $this->catr = $catr;
 
@@ -239,7 +239,7 @@ class Accidents
         return $this->voie;
     }
 
-    public function setVoie(string $voie): self
+    public function setVoie( $voie): self
     {
         $this->voie = $voie;
 
@@ -251,7 +251,7 @@ class Accidents
         return $this->v1;
     }
 
-    public function setV1(string $v1): self
+    public function setV1( $v1): self
     {
         $this->v1 = $v1;
 
@@ -263,7 +263,7 @@ class Accidents
         return $this->v2;
     }
 
-    public function setV2(string $v2): self
+    public function setV2( $v2): self
     {
         $this->v2 = $v2;
 
@@ -275,7 +275,7 @@ class Accidents
         return $this->circ;
     }
 
-    public function setCirc(string $circ): self
+    public function setCirc( $circ): self
     {
         $this->circ = $circ;
 
@@ -287,7 +287,7 @@ class Accidents
         return $this->nbv;
     }
 
-    public function setNbv(string $nbv): self
+    public function setNbv( $nbv): self
     {
         $this->nbv = $nbv;
 
@@ -299,7 +299,7 @@ class Accidents
         return $this->pr;
     }
 
-    public function setPr(string $pr): self
+    public function setPr( $pr): self
     {
         $this->pr = $pr;
 
@@ -311,7 +311,7 @@ class Accidents
         return $this->pr1;
     }
 
-    public function setPr1(string $pr1): self
+    public function setPr1( $pr1): self
     {
         $this->pr1 = $pr1;
 
@@ -323,7 +323,7 @@ class Accidents
         return $this->vosp;
     }
 
-    public function setVosp(string $vosp): self
+    public function setVosp( $vosp): self
     {
         $this->vosp = $vosp;
 
@@ -335,7 +335,7 @@ class Accidents
         return $this->prof;
     }
 
-    public function setProf(string $prof): self
+    public function setProf( $prof): self
     {
         $this->prof = $prof;
 
@@ -347,7 +347,7 @@ class Accidents
         return $this->plan;
     }
 
-    public function setPlan(string $plan): self
+    public function setPlan( $plan): self
     {
         $this->plan = $plan;
 
@@ -359,7 +359,7 @@ class Accidents
         return $this->lartpc;
     }
 
-    public function setLartpc(string $lartpc): self
+    public function setLartpc( $lartpc): self
     {
         $this->lartpc = $lartpc;
 
@@ -371,7 +371,7 @@ class Accidents
         return $this->larrout;
     }
 
-    public function setLarrout(string $larrout): self
+    public function setLarrout( $larrout): self
     {
         $this->larrout = $larrout;
 
@@ -383,7 +383,7 @@ class Accidents
         return $this->surf;
     }
 
-    public function setSurf(string $surf): self
+    public function setSurf( $surf): self
     {
         $this->surf = $surf;
 
@@ -395,7 +395,7 @@ class Accidents
         return $this->infra;
     }
 
-    public function setInfra(string $infra): self
+    public function setInfra( $infra): self
     {
         $this->infra = $infra;
 
@@ -407,7 +407,7 @@ class Accidents
         return $this->situ;
     }
 
-    public function setSitu(string $situ): self
+    public function setSitu( $situ): self
     {
         $this->situ = $situ;
 
@@ -419,7 +419,7 @@ class Accidents
         return $this->env1;
     }
 
-    public function setEnv1(string $env1): self
+    public function setEnv1( $env1): self
     {
         $this->env1 = $env1;
 
@@ -431,7 +431,7 @@ class Accidents
         return $this->an;
     }
 
-    public function setAn(string $an): self
+    public function setAn( $an): self
     {
         $this->an = $an;
 
@@ -443,7 +443,7 @@ class Accidents
         return $this->mois;
     }
 
-    public function setMois(string $mois): self
+    public function setMois( $mois): self
     {
         $this->mois = $mois;
 
@@ -455,7 +455,7 @@ class Accidents
         return $this->jour;
     }
 
-    public function setJour(string $jour): self
+    public function setJour( $jour): self
     {
         $this->jour = $jour;
 
@@ -467,7 +467,7 @@ class Accidents
         return $this->hrmn;
     }
 
-    public function setHrmn(string $hrmn): self
+    public function setHrmn( $hrmn): self
     {
         $this->hrmn = $hrmn;
 
@@ -479,7 +479,7 @@ class Accidents
         return $this->lum;
     }
 
-    public function setLum(string $lum): self
+    public function setLum( $lum): self
     {
         $this->lum = $lum;
 
@@ -491,7 +491,7 @@ class Accidents
         return $this->agg;
     }
 
-    public function setAgg(string $agg): self
+    public function setAgg( $agg): self
     {
         $this->agg = $agg;
 
@@ -503,7 +503,7 @@ class Accidents
         return $this->int;
     }
 
-    public function setInt(string $int): self
+    public function setInt( $int): self
     {
         $this->int = $int;
 
@@ -515,7 +515,7 @@ class Accidents
         return $this->atm;
     }
 
-    public function setAtm(string $atm): self
+    public function setAtm( $atm): self
     {
         $this->atm = $atm;
 
@@ -527,7 +527,7 @@ class Accidents
         return $this->col;
     }
 
-    public function setCol(string $col): self
+    public function setCol( $col): self
     {
         $this->col = $col;
 
@@ -539,7 +539,7 @@ class Accidents
         return $this->com;
     }
 
-    public function setCom(string $com): self
+    public function setCom( $com): self
     {
         $this->com = $com;
 
@@ -551,7 +551,7 @@ class Accidents
         return $this->adr;
     }
 
-    public function setAdr(string $adr): self
+    public function setAdr( $adr): self
     {
         $this->adr = $adr;
 
@@ -563,7 +563,7 @@ class Accidents
         return $this->gps;
     }
 
-    public function setGps(string $gps): self
+    public function setGps( $gps): self
     {
         $this->gps = $gps;
 
@@ -575,7 +575,7 @@ class Accidents
         return $this->lat;
     }
 
-    public function setLat(string $lat): self
+    public function setLat( $lat): self
     {
         $this->lat = $lat;
 
@@ -587,7 +587,7 @@ class Accidents
         return $this->long;
     }
 
-    public function setLong(string $long): self
+    public function setLong( $long): self
     {
         $this->long = $long;
 
@@ -599,7 +599,7 @@ class Accidents
         return $this->dep;
     }
 
-    public function setDep(string $dep): self
+    public function setDep( $dep): self
     {
         $this->dep = $dep;
 

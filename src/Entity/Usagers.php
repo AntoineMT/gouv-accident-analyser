@@ -92,7 +92,7 @@ class Usagers
         return $this->place;
     }
 
-    public function setPlace(string $place): self
+    public function setPlace( $place): self
     {
         $this->place = $place;
 
@@ -104,7 +104,7 @@ class Usagers
         return $this->catu;
     }
 
-    public function setCatu(string $catu): self
+    public function setCatu( $catu): self
     {
         $this->catu = $catu;
 
@@ -116,7 +116,7 @@ class Usagers
         return $this->grav;
     }
 
-    public function setGrav(string $grav): self
+    public function setGrav( $grav): self
     {
         $this->grav = $grav;
 
@@ -128,7 +128,7 @@ class Usagers
         return $this->sexe;
     }
 
-    public function setSexe(string $sexe): self
+    public function setSexe( $sexe): self
     {
         $this->sexe = $sexe;
 
@@ -140,7 +140,7 @@ class Usagers
         return $this->trajet;
     }
 
-    public function setTrajet(string $trajet): self
+    public function setTrajet( $trajet): self
     {
         $this->trajet = $trajet;
 
@@ -152,7 +152,7 @@ class Usagers
         return $this->secu;
     }
 
-    public function setSecu(string $secu): self
+    public function setSecu( $secu): self
     {
         $this->secu = $secu;
 
@@ -164,7 +164,7 @@ class Usagers
         return $this->locp;
     }
 
-    public function setLocp(string $locp): self
+    public function setLocp( $locp): self
     {
         $this->locp = $locp;
 
@@ -176,7 +176,7 @@ class Usagers
         return $this->actp;
     }
 
-    public function setActp(string $actp): self
+    public function setActp( $actp): self
     {
         $this->actp = $actp;
 
@@ -188,7 +188,7 @@ class Usagers
         return $this->etatp;
     }
 
-    public function setEtatp(string $etatp): self
+    public function setEtatp( $etatp): self
     {
         $this->etatp = $etatp;
 
@@ -200,7 +200,7 @@ class Usagers
         return $this->anNais;
     }
 
-    public function setAnNais(string $anNais): self
+    public function setAnNais( $anNais): self
     {
         $this->anNais = $anNais;
 
@@ -212,7 +212,7 @@ class Usagers
         return $this->numVeh;
     }
 
-    public function setNumVeh(string $numVeh): self
+    public function setNumVeh( $numVeh): self
     {
         $this->numVeh = $numVeh;
 

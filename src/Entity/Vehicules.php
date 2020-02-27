@@ -77,7 +77,7 @@ class Vehicules
         return $this->senc;
     }
 
-    public function setSenc(string $senc): self
+    public function setSenc( $senc): self
     {
         $this->senc = $senc;
 
@@ -89,7 +89,7 @@ class Vehicules
         return $this->catv;
     }
 
-    public function setCatv(string $catv): self
+    public function setCatv( $catv): self
     {
         $this->catv = $catv;
 
@@ -101,7 +101,7 @@ class Vehicules
         return $this->occutc;
     }
 
-    public function setOccutc(string $occutc): self
+    public function setOccutc( $occutc): self
     {
         $this->occutc = $occutc;
 
@@ -113,7 +113,7 @@ class Vehicules
         return $this->obs;
     }
 
-    public function setObs(string $obs): self
+    public function setObs( $obs): self
     {
         $this->obs = $obs;
 
@@ -125,7 +125,7 @@ class Vehicules
         return $this->obsm;
     }
 
-    public function setObsm(string $obsm): self
+    public function setObsm( $obsm): self
     {
         $this->obsm = $obsm;
 
@@ -137,7 +137,7 @@ class Vehicules
         return $this->choc;
     }
 
-    public function setChoc(string $choc): self
+    public function setChoc( $choc): self
     {
         $this->choc = $choc;
 
@@ -149,7 +149,7 @@ class Vehicules
         return $this->manv;
     }
 
-    public function setManv(string $manv): self
+    public function setManv( $manv): self
     {
         $this->manv = $manv;
 
@@ -161,7 +161,7 @@ class Vehicules
         return $this->numVeh;
     }
 
-    public function setNumVeh(string $numVeh): self
+    public function setNumVeh( $numVeh): self
     {
         $this->numVeh = $numVeh;
 
