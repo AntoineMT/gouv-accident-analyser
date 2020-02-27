@@ -265,6 +265,7 @@ class ImportData extends Command
                 }
                 $entityManager->flush();
                 $progressBar5->finish();
+                return 0;
             }
             $year++;
         }
