@@ -51,16 +51,38 @@ class UsagersRepository extends ServiceEntityRepository
 
     public function getGravite()
     {
-
         return $this->createQueryBuilder('t')
             ->select('COUNT(t.id), t.grav')
             ->groupBy('t.grav')
             ->orderBy('t.grav')
             ->getQuery()
             ->getResult()
+        ;
+    }
 
-            ;
+    public function getSexe()
+    {
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t.id), t.sexe')
+            ->groupBy('t.sexe')
+            ->orderBy('t.sexe')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
+    public function getTypeTrajet()
+    {
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t.id), t.trajet')
+            ->groupBy('t.trajet')
+            ->orderBy('t.trajet')
+            ->where('t.trajet is not null')
+            ->andWhere('t.trajet <> 0')
+            ->andWhere('t.trajet <> 5')
+            ->getQuery()
+            ->getResult()
+        ;
     }
 
 

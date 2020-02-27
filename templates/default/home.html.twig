@@ -35,4 +35,137 @@
             }
         });
     </script>
+
+    <canvas id="myChart2" style="height: 80vh"></canvas>
+    <script>
+
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['Indeme', 'Tué', 'Bléssé', 'Bléssé léger'],
+                datasets: [{
+                    label: 'Graphique au fil des ans',
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE46",
+                        "#ff47e5",
+                    ],
+                    //Trying to change background color for each element**
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56",
+                        "#ff47e5"
+                    ],
+                    data: [{% for data in resultBlesse %} {{ data.1 }}, {% endfor %}]
+                }]
+            },
+            options: {
+                scaleBeginAtZero: true,
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <canvas id="myChart3" style="height: 80vh"></canvas>
+    <script>
+
+        var ctx = document.getElementById('myChart3').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['Homme', 'Femme'],
+                datasets: [{
+                    label: 'Graphique au fil des ans',
+                    backgroundColor: [
+                        "#36A2EB",
+                        "#ff47e5"
+                    ],
+                    //Trying to change background color for each element**
+                    hoverBackgroundColor: [
+                        "#36A2EB",
+                        "#ff47e5"
+                    ],
+                    data: [{% for data in statSexe %} {{ data.1 }}, {% endfor %}]
+                }]
+            },
+            options: {
+                scaleBeginAtZero: true,
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+
+    <canvas id="myChart4" style="height: 80vh"></canvas>
+    <script>
+
+        var ctx = document.getElementById('myChart4').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: [
+                    'Domicile – travail',
+                    'Domicile – école',
+                    'Courses – achats',
+                    'Utilisation professionnelle',
+                    // 'Promenade – loisirs',
+                    'Autre'
+                ],
+                datasets: [{
+                    label: 'Graphique au fil des ans',
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE46",
+                        "#ff47e5",
+                        "#0dff11",
+                    ],
+                    //Trying to change background color for each element**
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56",
+                        "#ff47e5",
+                        "#0dff11",
+                    ],
+                    data: [{% for data in statTrajet %} {{ data.1 }}, {% endfor %}]
+                }]
+            },
+            options: {
+                scaleBeginAtZero: true,
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
 {% endblock %}
