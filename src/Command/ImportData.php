@@ -39,11 +39,11 @@ class ImportData extends Command
         $output->getFormatter()->setStyle('fire', $outputStyle);
         $outputStyle = new OutputFormatterStyle('green', 'black', ['bold', 'blink']);
         $output->getFormatter()->setStyle('fire2', $outputStyle);
-
+        $folderPath = getcwd().'/src/Data/CSV/';
         $year = 1970;
         while ($year <= (int)date('Y')+1) {
-            if (file_exists("/app/src/Data/CSV/lieux_" . $year . ".csv")) {
-                if (($fp = fopen("/app/src/Data/CSV/lieux_" . $year . ".csv", "r")) !== FALSE) {
+            if (file_exists($folderPath."lieux_" . $year . ".csv")) {
+                if (($fp = fopen($folderPath."lieux_" . $year . ".csv", "r")) !== FALSE) {
                     $finalArray = [];
                     $output->writeln(PHP_EOL.'<fire> === Traitement de l\'année ' . $year . ' === </fire>');
                     $output->writeln('<fire2> - Import CSV des lieux</fire2>');
@@ -78,7 +78,7 @@ class ImportData extends Command
                     $progressBar1->finish();
                     fclose($fp);
                 }
-                if (($fp = fopen("/app/src/Data/CSV/caracteristiques_" . $year . ".csv", "r")) !== FALSE) {
+                if (($fp = fopen($folderPath."caracteristiques_" . $year . ".csv", "r")) !== FALSE) {
                     $i = 0;
                     $output->writeln(PHP_EOL . '<fire2> - Import CSV des caracteristiques</fire2>');
                     $progressBar2 = new ProgressBar($output);
@@ -107,7 +107,7 @@ class ImportData extends Command
                     $progressBar2->finish();
                     fclose($fp);
                 }
-                if (($fp = fopen("/app/src/Data/CSV/usagers_" . $year . ".csv", "r")) !== FALSE) {
+                if (($fp = fopen($folderPath."usagers_" . $year . ".csv", "r")) !== FALSE) {
                     $i = 0;
                     $output->writeln(PHP_EOL . '<fire2> - Import CSV des usagers</fire2>');
                     $progressBar3 = new ProgressBar($output);
@@ -134,7 +134,7 @@ class ImportData extends Command
                     $progressBar3->finish();
                     fclose($fp);
                 }
-                if (($fp = fopen("/app/src/Data/CSV/vehicules_" . $year . ".csv", "r")) !== FALSE) {
+                if (($fp = fopen($folderPath."vehicules_" . $year . ".csv", "r")) !== FALSE) {
                     $i = 0;
                     $output->writeln(PHP_EOL . '<fire2> - Import CSV des vehicules</fire2>');
                     $progressBar4 = new ProgressBar($output);
