@@ -19,22 +19,26 @@ class AccidentsRepository extends ServiceEntityRepository
         parent::__construct($registry, Accidents::class);
     }
 
-    // /**
-    //  * @return Accidents[] Returns an array of Accidents objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function getStatistiquesAnnées()
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
+//        return $this->createQueryBuilder('a')
+//            ->andWhere('a.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('a.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+
+
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t.id), t.annee')
+            ->groupBy('t.annee')
             ->getQuery()
             ->getResult()
         ;
+
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Accidents

@@ -3,5 +3,27 @@
 {% block title %}Xx_ultimate_accident_xX ! (PH){% endblock %}
 
 {% block body %}
-fqds
+    <canvas id="myChart" style="height: 80vh"></canvas>
+    <script>
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: [{% for data in resultStatistiquesAnnees %} '{{ data.annee }}', {% endfor %}],
+                datasets: [{
+                    label: 'Graphique au fil des ans',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [{% for data in resultStatistiquesAnnees %} {{ data.1 }}, {% endfor %}]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+    </script>
 {% endblock %}
