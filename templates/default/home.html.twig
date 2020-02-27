@@ -16,14 +16,23 @@
                 labels: [{% for data in resultStatistiquesAnnees %} '{{ data.annee }}', {% endfor %}],
                 datasets: [{
                     label: 'Graphique au fil des ans',
-                    backgroundColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgb(255, 255, 255)',
                     borderColor: 'rgb(255, 99, 132)',
                     data: [{% for data in resultStatistiquesAnnees %} {{ data.1 }}, {% endfor %}]
                 }]
             },
 
             // Configuration options go here
-            options: {}
+            options: {
+                scaleBeginAtZero: true,
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                }
+            }
         });
     </script>
 {% endblock %}
