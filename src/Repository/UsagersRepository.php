@@ -47,4 +47,21 @@ class UsagersRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
+    public function getGravite()
+    {
+
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t.id), t.grav')
+            ->groupBy('t.grav')
+            ->orderBy('t.grav')
+            ->getQuery()
+            ->getResult()
+
+            ;
+
+    }
+
+
 }

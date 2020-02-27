@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Xx_ultimate_accident_xX ! (PH){% endblock %}
+
+{% block body %}
+    <canvas id="myChart" style="height: 80vh"></canvas>
+    <script>
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['Indeme', 'Tué', 'Bléssé', 'Bléssé léger'],
+                datasets: [{
+                    label: 'Graphique au fil des ans',
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE46",
+                        "#ff47e5",
+                    ],
+                    //Trying to change background color for each element**
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56",
+                        "#ff47e5"
+                    ],
+                    data: [{% for data in resultStatistiquesAnnees %} {{ data.1 }}, {% endfor %}]
+                }]
+            },
+            options: {
+                scaleBeginAtZero: true,
+                scales : {
+                    yAxes : [{
+                        ticks : {
+                            beginAtZero : true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+{% endblock %}
